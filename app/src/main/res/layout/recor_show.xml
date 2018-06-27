@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_info_bubble"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:id="@+id/map_info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="王五"
+            android:singleLine="true"
+            android:maxEms="3"
+            android:textColor="@color/text_color"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/map_info_vehicle_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/map_info_name"
+            android:text="粤B123456"
+            android:textColor="@color/text_color"
+          android:textSize="10sp" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/map_info_city"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_toRightOf="@+id/map_info_vehicle_num"-->
+            <!--android:text="深圳"-->
+            <!--android:textColor="@color/text_color"-->
+            <!--android:textSize="10dp" />-->
+
+        <ImageView
+            android:id="@+id/map_info_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/map_info_vehicle_num"
+            android:src="@drawable/vehicle_icon_wired" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/map_info_state"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:text="【行驶】"-->
+            <!--android:textColor="#3fbc19"-->
+            <!--android:textSize="10dp" />-->
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:id="@+id/map_info_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:textSize="10sp"
+            android:layout_marginTop="5dp"
+            android:text="08-07 21:30:30 [定位] " />
+
+        <TextView
+            android:id="@+id/map_info_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/map_info_location"
+            android:text="速度：56KM/H"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="5dp"
+          android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/map_info_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="地址："
+        android:textColor="@color/text_color"
+      android:textSize="10sp" />
+
+</LinearLayout>

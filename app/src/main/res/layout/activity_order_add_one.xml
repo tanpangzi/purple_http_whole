@@ -1,0 +1,683 @@
+<LinearLayout
+    style="@style/view_group_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        style="@style/line_horizontal_gray_style"
+        android:layout_height="10dp"
+        android:background="@color/bg_default"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingBottom="@dimen/distance_10"
+        android:paddingTop="@dimen/distance_10"
+        android:src="@drawable/single_new_user"/>
+
+    <!--<view style="@style/line_horizontal_gray_style"/>-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:background="@color/line_grey"/>-->
+    <TextView
+        style="@style/line_horizontal_gray_style"
+        android:layout_height="10dp"
+        android:background="@color/bg_default"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingLeft="@dimen/distance_5"
+        android:paddingRight="@dimen/distance_20"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--性别-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="@string/userinfo_sex"/>
+
+                    <TextView
+                        android:id="@+id/txt_sex"
+                        style="@style/txt_order_add_value"/>
+
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+
+                <!--婚姻状况-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="@string/userinfo_marital_status"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_marital_status"
+                        style="@style/txt_order_add_value"/>
+
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+                <!--学历-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="@string/userinfo_education"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_education"
+                        style="@style/txt_order_add_value"/>
+
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+                <!--房产类型-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="@string/userinfo_house_type"/>
+
+                    <TextView
+                        android:id="@+id/txt_house_type"
+                        style="@style/txt_order_add_value"/>
+
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+                <!--工作单位-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="@string/userinfo_work_unit"/>
+
+                    <EditText
+                        android:id="@+id/et_work_unit"
+                        style="@style/et_order_add_value"
+                        android:hint="请输入工作单位"
+                        android:maxEms="12"
+                        android:maxLength="40"/>
+
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+                <!--单位地址-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/work_unit"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="@string/userinfo_work_unit_address"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_work_unit_address"
+                        style="@style/txt_order_add_value"/>
+
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+                <!--单位详细地址-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="@string/userinfo_work_detailed_address"/>
+
+                    <EditText
+                        android:id="@+id/et_work_detailed_address"
+                        style="@style/et_order_add_value"
+                        android:hint="请输入详细地址"
+                        android:imeOptions="actionNext"
+                        android:maxEms="12"
+                        android:maxLength="40"/>
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+                <!--单位固话-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="@string/userinfo_work_telephone"/>
+
+                    <EditText
+                        android:id="@+id/et_work_telephone"
+                        style="@style/et_order_add_value"
+                        android:hint="请输入区号+号码的单位电话"
+                        android:inputType="phone"
+                        android:maxLength="12"/>
+
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_spouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/distance_15"
+                    android:text="配偶信息"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <!--<view-->
+                <!--style="@style/line_horizontal_gray_style"-->
+                <!--android:background="@color/main_head_area_background"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/main_head_area_background"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="配偶姓名"/>
+
+
+                    <EditText
+                        android:id="@+id/et_spouseName"
+                        style="@style/et_order_add_value"
+                        android:hint="请输入配偶姓名"
+                        android:imeOptions="actionNext"
+                        android:maxEms="10"
+                        android:maxLength="16"/>
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="配偶身份证"/>
+
+                    <EditText
+                        android:id="@+id/et_spouseId"
+                        style="@style/et_order_add_value"
+                        android:digits="@string/text_id_card_digits"
+                        android:gravity="right"
+                        android:hint="请输入配偶身份证"
+                        android:imeOptions="actionNext"
+                        android:maxLength="18"/>
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:text="配偶电话"/>
+
+
+                    <EditText
+                        android:id="@+id/et_spousePhone"
+                        style="@style/et_order_add_value"
+                        android:hint="请输入配偶电话"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="11"/>
+
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/distance_15"
+                    android:text="联系人信息"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <!--<view-->
+                <!--style="@style/line_horizontal_gray_style"-->
+                <!--android:background="@color/main_head_area_background"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/main_head_area_background"/>
+
+                <!--联系人1-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:minWidth="125dp"
+                        android:text="@string/userinfo_customer_contact"/>
+
+                    <EditText
+                        android:id="@+id/et_customer_contact"
+                        style="@style/et_order_add_value"
+                        android:hint="请输入客户联系人"
+                        android:imeOptions="actionNext"
+                        android:maxEms="10"
+                        android:maxLength="16"
+                        android:singleLine="true"/>
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:minWidth="125dp"
+                        android:text="@string/userinfo_customer_relationship"/>
+
+                    <TextView
+                        android:id="@+id/txt_customer_relationship"
+                        style="@style/txt_order_add_value"/>
+
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:minWidth="125dp"
+                        android:text="@string/userinfo_customer_party_phone"/>
+
+
+                    <EditText
+                        android:id="@+id/et_customer_party_phone"
+                        style="@style/et_order_add_value"
+                        android:hint="请输入联系人电话"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="11"/>
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+                <!--联系人2-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:minWidth="125dp"
+                        android:text="客户联系人2"/>
+
+
+                    <EditText
+                        android:id="@+id/et_customer_contact2"
+                        style="@style/et_order_add_value"
+                        android:hint="请输入客户联系人2"
+                        android:imeOptions="actionNext"
+                        android:maxEms="10"
+                        android:maxLength="16"/>
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:minWidth="125dp"
+                        android:text="与客户关系2"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_customer_relationship2"
+                        style="@style/txt_order_add_value"/>
+
+
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txt_order_add_key"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:minWidth="125dp"
+                        android:text="联系人电话2"/>
+
+
+                    <EditText
+                        android:id="@+id/et_customer_party_phone2"
+                        style="@style/et_order_add_value"
+                        android:hint="请输入联系人电话2"
+                        android:inputType="phone"
+                        android:maxLength="11"/>
+                </LinearLayout>
+
+                <!--<view style="@style/line_horizontal_gray_style"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:background="@color/line_grey"/>
+                <!--联系人3-->
+                <LinearLayout
+                    android:id="@+id/view_contact3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/txt_order_add_key"
+                            android:minWidth="125dp"
+                            android:text="客户联系人3"/>
+
+                        <EditText
+                            android:id="@+id/et_customer_contact3"
+                            style="@style/et_order_add_value"
+                            android:hint="请输入客户联系人3"
+                            android:imeOptions="actionNext"
+                            android:maxEms="10"
+                            android:maxLength="16"/>
+                    </LinearLayout>
+
+                    <!--<view style="@style/line_horizontal_gray_style"/>-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/distance_15"
+                        android:background="@color/line_grey"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/txt_order_add_key"
+                            android:minWidth="125dp"
+                            android:text="与客户关系3"/>
+
+                        <TextView
+                            android:id="@+id/txt_customer_relationship3"
+                            style="@style/txt_order_add_value"/>
+
+                    </LinearLayout>
+
+                    <!--<view style="@style/line_horizontal_gray_style"/>-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/distance_15"
+                        android:background="@color/line_grey"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/txt_order_add_key"
+                            android:minWidth="125dp"
+                            android:text="联系人电话3"/>
+
+                        <EditText
+                            android:id="@+id/et_customer_party_phone3"
+                            style="@style/et_order_add_value"
+                            android:hint="请输入联系人电话3"
+                            android:inputType="phone"
+                            android:maxLength="11"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/distance_15"
+                        android:background="@color/line_grey"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_add_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/im_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/distance_15"
+                    android:layout_marginTop="@dimen/distance_15"
+                    android:src="@drawable/add_customer_contact"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.zimi.zimixing.widget.AutoBgButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@color/main_head_area_background"
+                    android:text="上一步"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <com.zimi.zimixing.widget.AutoBgButton
+                    android:id="@+id/btn_goon"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@color/main_head_area_background"
+                    android:text="下一步"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_default"
+    android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@+id/title_view_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <com.zimi.zimixing.widget.CCPLauncherUITabView
+            android:id="@+id/laucher_tab_top"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:tabNames="@array/task_state" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/account_task_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

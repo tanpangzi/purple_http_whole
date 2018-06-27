@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_dialog"
+        android:orientation="vertical">
+        <!--android:padding="10dp">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_default"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.zimi.zimixing.widget.AutoBgTextView
+                    android:id="@+id/txt_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/distance_10"
+                    android:text="@string/cancel"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="@dimen/distance_50"
+                    android:layout_toLeftOf="@+id/iv_finish"
+                    android:src="@drawable/btn_cancel" />
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/distance_10"
+                    android:text="@string/prompt"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_middle"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/distance_10"
+                    android:src="@drawable/btn_confirm" />
+
+                <com.zimi.zimixing.widget.AutoBgTextView
+                    android:id="@+id/txt_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/distance_10"
+                    android:text="@string/sure"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!--<View style="@style/line_horizontal_gray_style"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.zimi.zimixing.widget.loopview.LoopView
+                    android:id="@+id/view_year"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    app:awv_itemsVisibleCount="7"
+                    app:awv_textsize="14" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+                <com.zimi.zimixing.widget.loopview.LoopView
+                    android:id="@+id/view_month"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    app:awv_itemsVisibleCount="7"
+                    app:awv_textsize="14" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+                <com.zimi.zimixing.widget.loopview.LoopView
+                    android:id="@+id/view_day"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    app:awv_itemsVisibleCount="7"
+                    app:awv_textsize="14" />
+
+                <com.zimi.zimixing.widget.loopview.LoopView
+                    android:id="@+id/view_hour"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    app:awv_itemsVisibleCount="7"
+                    app:awv_textsize="14" />
+
+                <com.zimi.zimixing.widget.loopview.LoopView
+                    android:id="@+id/view_minute"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    app:awv_itemsVisibleCount="7"
+                    app:awv_textsize="14" />
+
+                <com.zimi.zimixing.widget.loopview.LoopView
+                    android:id="@+id/view_second"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    app:awv_itemsVisibleCount="7"
+                    app:awv_textsize="14" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

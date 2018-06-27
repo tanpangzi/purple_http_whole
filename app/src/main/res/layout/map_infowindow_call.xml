@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_info_bubble"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:id="@+id/map_info_call_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="王五"
+            android:singleLine="true"
+            android:maxEms="3"
+            android:textColor="@color/text_color"
+          android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/map_info_call_vehicle_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/map_info_call_name"
+            android:text="粤B123456"
+            android:textColor="@color/text_color"
+          android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/map_info_call_state_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:text="深圳"
+            android:textColor="@color/text_color"
+          android:textSize="10sp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/map_info_call_vehicle_num"
+            android:layout_toEndOf="@+id/map_info_call_vehicle_num"
+            android:layout_marginStart="14dp" />
+
+
+        <ImageView
+            android:id="@+id/map_info_call_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/map_info_call_state_t"
+            android:src="@drawable/vehicle_icon_wired" />
+
+
+        <TextView
+            android:id="@+id/map_info_call_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="【行驶】"
+            android:textColor="#3fbc19"
+          android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/map_info_call_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/map_info_call_name"
+            android:layout_marginTop="2dp"
+          android:textSize="10sp"
+            android:text="08-07 21:30:30     0KM/H " />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp">
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/map_info_call_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="地址：洒落的繁华路口阿松大发大水的伽达嘎都给阿瑟东方闪电"
+        android:textColor="@color/text_color"
+      android:textSize="10sp" />
+
+</LinearLayout>

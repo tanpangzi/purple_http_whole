@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_devide"
+        android:background="#e6e6e6"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_below="@id/tv_devide"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp">
+
+        <ImageView
+            android:id="@+id/im_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/message_spot" />
+
+        <TextView
+            android:id="@+id/tv_message_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/im_message"
+            android:text="2017-02-02 13:03"
+            android:textColor="#7f7f7f"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_container"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:text="客户："
+        android:textColor="#7f7f7f"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_message_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_guest"
+        android:layout_alignBottom="@+id/tv_guest"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/tv_guest"
+        android:layout_toRightOf="@+id/tv_guest"
+        android:text="张三丰"
+        android:textColor="#7f7f7f"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_guest"
+        android:layout_alignStart="@+id/tv_guest"
+        android:layout_below="@+id/tv_guest"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        android:text="消息内容"
+        android:textColor="@color/text_color"
+        android:textSize="14sp" />
+
+</RelativeLayout>

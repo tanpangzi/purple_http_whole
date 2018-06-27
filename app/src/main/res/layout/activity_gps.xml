@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <CheckBox
+            android:id="@+id/gps_traffic_conditions"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/traffic_conditions"
+            android:button="@null"/>
+
+        <ImageView
+            android:id="@+id/gps_panoramic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/panoramic" />
+
+        <ImageView
+            android:id="@+id/gps_vehicle_position"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="140dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/vehicle_position"/>
+
+        <LinearLayout
+            android:id="@+id/gps_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/wbg"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_playback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/alarm_info_playback"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="回放"
+                android:textColor="#ec5645"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_gps_guid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/alarm_info_"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="导航"
+                android:textColor="#3384fe"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/gps_alarm_map"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/alarm_map"/>
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="110dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_right"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/gps_bg_right_1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:id="@+id/gps_bg_right_2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/gps_mobile_phone_position"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/mobile_phone_position"/>
+
+        <TextView
+            android:id="@+id/gps_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/refresh"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="30秒后刷新位置"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+    </FrameLayout>
+</LinearLayout>

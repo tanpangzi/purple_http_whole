@@ -1,0 +1,190 @@
+<LinearLayout
+    style="@style/view_group_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@id/view_line"
+        style="@style/line_horizontal_gray_style"
+        android:layout_height="10dp"
+        android:layout_below="@+id/title_view"
+        android:background="@color/bg_default"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_line"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/view_parent"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/distance_20"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_circular_jzg_resulet"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/distance_15"
+                        android:text="19.75"
+                        android:textColor="@color/main_head_area_background"
+                        android:textSize="35sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="—（万）—"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_big"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/distance_10"
+                android:text="拟批核金额"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/font_size_big"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/distance_20"
+                android:paddingRight="@dimen/distance_20">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客户信息"
+                    android:textColor="@color/font_content"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txt_name_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="客户姓名："
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_little"/>
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/txt_name_key"
+                        android:layout_toRightOf="@+id/txt_name_key"
+                        android:ellipsize="end"
+                        android:maxEms="5"
+                        android:singleLine="true"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_little"/>
+
+
+                    <com.zimi.zimixing.widget.AutoBgTextView
+                        android:id="@+id/txt_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="@dimen/distance_5"
+                        android:drawableRight="@drawable/phome"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_little"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/txt_phone"
+                        android:text="联系电话："
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_little"/>
+
+                    <TextView
+                        android:id="@+id/txt_auto_price_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_name_key"
+                        android:layout_marginTop="10dp"
+                        android:text="评估价（万）："
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_little"/>
+
+                    <TextView
+                        android:id="@+id/txt_auto_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/txt_auto_price_key"
+                        android:layout_below="@+id/txt_phone"
+                        android:layout_toRightOf="@+id/txt_auto_price_key"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_little"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.zimi.zimixing.widget.AutoBgButton
+                        android:id="@+id/btn_back"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/btn_height"
+                        android:layout_weight="5"
+                        android:background="@color/main_head_area_background"
+                        android:text="返回"
+                        android:textColor="@color/font_white"
+                        android:textSize="@dimen/font_size_middle"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <com.zimi.zimixing.widget.AutoBgButton
+                        android:id="@+id/btn_goon"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/btn_height"
+                        android:layout_weight="5"
+                        android:background="@color/main_head_area_background"
+                        android:text="继续录单"
+                        android:textColor="@color/font_white"
+                        android:textSize="@dimen/font_size_middle"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

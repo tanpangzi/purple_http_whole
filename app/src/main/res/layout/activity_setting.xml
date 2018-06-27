@@ -1,0 +1,114 @@
+<RelativeLayout
+    style="@style/view_group_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_default"
+    android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_login_out"
+        android:layout_below="@id/title_view"
+        android:layout_marginTop="@dimen/distance_10"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.zimi.zimixing.widget.AutoBgTextView
+                android:id="@+id/txt_bind_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/binding_phone"
+                android:drawablePadding="@dimen/distance_20"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/account_manager_ll_item"
+                android:paddingLeft="@dimen/account_manager_ll_item_tv_marginLeft"
+                android:paddingRight="@dimen/account_manager_ll_item_tv_marginStart"
+                android:text="绑定手机号"
+                android:textColor="@color/default_black"
+                android:textSize="@dimen/font_size_normal"/>
+
+
+            <com.zimi.zimixing.widget.AutoBgTextView
+                android:id="@+id/txt_edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/updata_passsword"
+                android:drawablePadding="@dimen/distance_20"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/account_manager_ll_item"
+                android:paddingLeft="@dimen/account_manager_ll_item_tv_marginLeft"
+                android:paddingRight="@dimen/account_manager_ll_item_tv_marginStart"
+                android:text="修改密码"
+                android:textColor="@color/default_black"
+                android:textSize="@dimen/font_size_normal"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_height="wrap_content">
+
+                <com.zimi.zimixing.widget.AutoBgTextView
+                    android:id="@+id/txt_check_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/version_update"
+                    android:drawablePadding="@dimen/distance_20"
+                    android:drawableRight="@drawable/right_arrow"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/account_manager_ll_item"
+                    android:paddingLeft="@dimen/account_manager_ll_item_tv_marginLeft"
+                    android:paddingRight="@dimen/account_manager_ll_item_tv_marginStart"
+                    android:text="版本更新"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <TextView
+                    android:id="@+id/txt_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/account_manager_ll_item"
+                    android:text="版本更新"
+                    android:textColor="@color/font_content"
+                    android:textSize="@dimen/font_size_normal"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.zimi.zimixing.widget.AutoBgButton
+        android:id="@+id/btn_login_out"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@color/main_head_area_background"
+        android:text="退出账户"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_middle"
+        custom:bgAlpha="150"
+        custom:bgRadius="3dp"/>
+</RelativeLayout>

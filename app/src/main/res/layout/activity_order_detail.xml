@@ -1,0 +1,981 @@
+<LinearLayout
+    style="@style/view_group_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_default"
+    android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--终审建议-->
+            <LinearLayout
+                android:id="@+id/view_zxjy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/distance_5"
+                    android:padding="@dimen/distance_10"
+                    android:text="终审建议"
+                    android:textColor="#eb6617"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#eb6617"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/distance_10"
+                    android:paddingLeft="@dimen/distance_20"
+                    android:paddingRight="@dimen/distance_20"
+                    android:paddingTop="@dimen/distance_10">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="拟批核金额："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"/>
+
+                        <TextView
+                            android:id="@+id/final_proposal_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_01"
+                            android:layout_toRightOf="@+id/tv_01"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/final_proposal_repayment_cycle"
+                            android:layout_toStartOf="@+id/final_proposal_repayment_cycle"
+                            android:text="拟批核还款周期："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"
+                            />
+
+                        <TextView
+                            android:id="@+id/final_proposal_repayment_cycle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="5dp"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_10">
+
+                        <TextView
+                            android:id="@+id/tv_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="拟批核产品："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/final_proposal_product"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_03"
+                            android:layout_toRightOf="@+id/tv_03"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="12sp"/>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--个人信息-->
+            <LinearLayout
+                android:id="@+id/view_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/distance_5"
+                    android:padding="@dimen/distance_10"
+                    android:text="个人信息"
+                    android:textColor="#eb6617"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.2dp"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"
+                    android:background="#eb6617"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/distance_10"
+                    android:paddingLeft="@dimen/distance_20"
+                    android:paddingRight="@dimen/distance_20"
+                    android:paddingTop="@dimen/distance_10"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="姓名："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_11"
+                            android:layout_toRightOf="@+id/tv_11"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/tv_od_sex"
+                            android:layout_toStartOf="@+id/tv_od_sex"
+                            android:text="性别："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="@dimen/distance_10"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:text="身份证号："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_ID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_13"
+                            android:layout_toRightOf="@+id/tv_13"
+                            android:ellipsize="end"
+                            android:maxEms="20"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+
+                    </RelativeLayout>
+                    <!--<RelativeLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="25dp"-->
+                    <!--android:layout_marginRight="30dp"-->
+                    <!--android:layout_marginTop="15dp">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_4"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:text="婚姻状况："-->
+                    <!--android:textColor="@color/text_color"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_od_marriage"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_toEndOf="@+id/tv_4"-->
+                    <!--android:layout_toRightOf="@+id/tv_4"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxEms="7"-->
+                    <!--android:textColor="@color/font_content"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_5"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="@dimen/text_ml_order_defult"-->
+                    <!--android:text="学历："-->
+                    <!--android:textColor="@color/text_color"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_od_education"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_toEndOf="@+id/tv_5"-->
+                    <!--android:layout_toRightOf="@+id/tv_5"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxEms="7"-->
+                    <!--android:textColor="@color/font_content"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+
+                    <!--</RelativeLayout>-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="@dimen/distance_10"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:text="联系电话："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_16"
+                            android:layout_toRightOf="@+id/tv_16"
+                            android:ellipsize="end"
+                            android:maxEms="11"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--借款信息-->
+            <LinearLayout
+                android:id="@+id/view_loan_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/distance_5"
+                    android:padding="@dimen/distance_10"
+                    android:text="借款信息"
+                    android:textColor="#eb6617"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.2dp"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"
+                    android:background="#eb6617"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/distance_10"
+                    android:paddingLeft="@dimen/distance_20"
+                    android:paddingRight="@dimen/distance_20"
+                    android:paddingTop="@dimen/distance_10"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="借款用途："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_loanPurpose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_21"
+                            android:layout_toRightOf="@+id/tv_21"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/tv_od_loanMount"
+                            android:layout_toStartOf="@+id/tv_od_loanMount"
+                            android:text="借款金额："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_loanMount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_10">
+
+                        <TextView
+                            android:id="@+id/tv_23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="产品类型："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_productTypes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_23"
+                            android:layout_toRightOf="@+id/tv_23"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/tv_od_repaymentMethods"
+                            android:layout_toStartOf="@+id/tv_od_repaymentMethods"
+                            android:text="还款方式："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_repaymentMethods"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_10">
+
+                        <TextView
+                            android:id="@+id/tv_27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="贷款周期："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_repaymentPeriodhods"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_27"
+                            android:layout_toRightOf="@+id/tv_27"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--车辆信息-->
+            <LinearLayout
+                android:id="@+id/view_car_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/distance_5"
+                    android:padding="@dimen/distance_10"
+                    android:text="车辆信息"
+                    android:textColor="#eb6617"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.2dp"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"
+                    android:background="#eb6617"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/distance_10"
+                    android:paddingLeft="@dimen/distance_20"
+                    android:paddingRight="@dimen/distance_20"
+                    android:paddingTop="@dimen/distance_10"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="车牌号："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_licencePlate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_31"
+                            android:layout_toRightOf="@+id/tv_31"
+                            android:ellipsize="end"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/tv_od_carFrameNo"
+                            android:layout_toStartOf="@+id/tv_od_carFrameNo"
+                            android:text="车架号："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_carFrameNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:ellipsize="end"
+                            android:maxLength="22"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_10">
+
+
+                        <TextView
+                            android:id="@+id/tv_32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="车辆品牌："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_brand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_32"
+                            android:layout_toRightOf="@+id/tv_32"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/tv_3"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="出厂日期："-->
+                        <!--android:textColor="@color/text_color"-->
+                        <!--android:textSize="@dimen/font_size_little" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/tv_od_produceDate"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_toEndOf="@+id/tv_3"-->
+                        <!--android:layout_toRightOf="@+id/tv_3"-->
+                        <!--android:textColor="@color/font_content"-->
+                        <!--android:textSize="@dimen/font_size_little" />-->
+
+
+                    </RelativeLayout>
+
+                    <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="25dp"-->
+                    <!--android:layout_marginRight="25dp"-->
+                    <!--android:layout_marginTop="15dp">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_7"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:text="型号："-->
+                    <!--android:textColor="@color/text_color"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_od_carModel"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_toEndOf="@+id/tv_7"-->
+                    <!--android:layout_toRightOf="@+id/tv_7"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxEms="7"-->
+                    <!--android:textColor="@color/font_content"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_9"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="@dimen/text_ml_order_defult"-->
+                    <!--android:text="新车单价："-->
+                    <!--android:textColor="@color/text_color"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_od_assess"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_toEndOf="@+id/tv_9"-->
+                    <!--android:layout_toRightOf="@+id/tv_9"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxEms="7"-->
+                    <!--android:textColor="@color/font_content"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--</RelativeLayout>-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_10">
+
+                        <TextView
+                            android:id="@+id/tv_38"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="行驶公里数（万）："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_mileage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_38"
+                            android:layout_toRightOf="@+id/tv_38"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/tv_od_evaluationPrice"
+                            android:layout_toStartOf="@+id/tv_od_evaluationPrice"
+                            android:text="评估价（万）："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_evaluationPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/distance_10">
+
+                        <TextView
+                            android:id="@+id/tv_39"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="发动机号："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_carEngineNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toEndOf="@+id/tv_39"
+                            android:layout_toRightOf="@+id/tv_39"
+                            android:ellipsize="end"
+                            android:maxEms="5"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/tv_od_carColor"
+                            android:layout_toStartOf="@+id/tv_od_carColor"
+                            android:text="车身颜色："
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_little"/>
+
+                        <TextView
+                            android:id="@+id/tv_od_carColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:ellipsize="end"
+                            android:maxEms="7"
+                            android:singleLine="true"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_size_little"/>
+
+                    </RelativeLayout>
+
+                    <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="25dp"-->
+                    <!--android:layout_marginRight="25dp"-->
+                    <!--android:layout_marginTop="15dp">-->
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_14"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:text="燃料："-->
+                    <!--android:textColor="@color/text_color"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_od_carFuel"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_toEndOf="@+id/tv_14"-->
+                    <!--android:layout_toRightOf="@+id/tv_14"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxEms="7"-->
+                    <!--android:textColor="@color/font_content"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_15"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="发证日期："-->
+                    <!--android:textColor="@color/text_color"-->
+                    <!--android:textSize="@dimen/font_size_little"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_marginRight="98dp"-->
+                    <!--android:layout_marginEnd="98dp" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_od_certificateDate"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_toEndOf="@+id/tv_15"-->
+                    <!--android:layout_toRightOf="@+id/tv_15"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxEms="7"-->
+                    <!--android:textColor="@color/font_content"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--</RelativeLayout>-->
+                    <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="25dp"-->
+                    <!--android:layout_marginRight="25dp"-->
+                    <!--android:layout_marginTop="15dp">-->
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_16"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:text="注册日期："-->
+                    <!--android:textColor="@color/text_color"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_od_registerDate"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_toEndOf="@+id/tv_16"-->
+                    <!--android:layout_toRightOf="@+id/tv_16"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxEms="7"-->
+                    <!--android:textColor="@color/font_content"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+                    <!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="25dp"-->
+                    <!--android:layout_marginRight="25dp"-->
+                    <!--android:layout_marginTop="15dp">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_11"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="车辆表面情况："-->
+                    <!--android:textColor="@color/text_color"-->
+                    <!--android:textSize="@dimen/font_size_little"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_alignParentStart="true" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_od_surfaceConditionDescription"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_toEndOf="@+id/tv_11"-->
+                    <!--android:layout_toRightOf="@+id/tv_11"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxEms="50"-->
+                    <!--android:paddingRight="25dp"-->
+                    <!--android:inputType="textMultiLine"-->
+                    <!--android:textColor="@color/font_content"-->
+                    <!--android:textSize="@dimen/font_size_little" />-->
+
+
+                    <!--</RelativeLayout>-->
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--图像资料-->
+            <LinearLayout
+                android:id="@+id/view_image_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/distance_10"
+                android:layout_marginTop="@dimen/distance_10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/distance_5"
+                    android:padding="@dimen/distance_10"
+                    android:text="图像资料"
+                    android:textColor="#eb6617"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.2dp"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"
+                    android:background="#eb6617"/>
+
+                <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/image_new_rv"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"/>-->
+                <com.zimi.zimixing.widget.AutoSizeListView
+                    android:id="@+id/lv_image"
+                    style="@style/list_style"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

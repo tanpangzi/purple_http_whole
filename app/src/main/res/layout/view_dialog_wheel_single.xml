@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_dialog"
+        android:orientation="vertical">
+        <!--android:padding="10dp">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="@color/bg_default"
+                android:orientation="horizontal">
+
+                <com.zimi.zimixing.widget.AutoBgTextView
+                    android:id="@+id/txt_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/distance_10"
+                    android:text="@string/cancel"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/distance_10"
+                    android:text="@string/prompt"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_middle"
+                    android:visibility="gone"/>
+
+                <com.zimi.zimixing.widget.AutoBgTextView
+                    android:id="@+id/txt_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/distance_10"
+                    android:text="@string/sure"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"/>
+            </RelativeLayout>
+
+            <!--<View style="@style/line_horizontal_gray_style"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:visibility="visible"/>
+
+                <com.zimi.zimixing.widget.loopview.LoopView
+                    android:id="@+id/view_wheel"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="2"
+                    app:awv_itemsVisibleCount="7"
+                    app:awv_textsize="16"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

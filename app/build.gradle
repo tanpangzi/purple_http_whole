@@ -1,0 +1,161 @@
+//apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
+
+// 获取当前系统时间
+static def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+8"))
+}
+
+// 获取程序名称
+static def getProductName() {
+    return "dyt"
+}
+
+// 配置了所有android构建的参数
+android {
+
+    compileSdkVersion 25                        // 编译应用使用SDK版本
+    buildToolsVersion '25.0.2'                  // 编译工具的版本
+
+    // 默认项目配置信息
+    defaultConfig {
+        applicationId "com.zimi.zimixing"        // 包名
+        minSdkVersion 15                        // sdk最低支持版本
+        // 目标SDK版本，如果目标设备的API版本正好等于此数值，就不会为此程序开启兼容性检查判断的工作
+        targetSdkVersion 25                     // minSdkVersion <= targetSdkVersion <= compileSdkVersion
+        versionCode 13                           // 应用的版本号
+        versionName "3.3.0"                     // 应用的版本名
+        multiDexEnabled true
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "main"] // 默认渠道
+    }
+
+    // 版本签名配置
+    signingConfigs {
+        baseSignConfigs {
+            //MD5: 71:E5:40:32:69:0D:EB:C0:BE:28:5F:8F:9B:59:09:24
+            //SHA1: F5:E8:CF:7B:83:FD:66:53:D4:5D:9B:D8:47:A7:F2:1A:61:00:26:F0
+            //storeFile file('C:/Users/win7/.android/bpa.keystore')
+            storeFile file("new_dyt.keystore")        // 签名文件的路径
+            storePassword "Lennie123"             // 密码
+            keyAlias "dyt"                        // 签名的别名
+            keyPassword "Lennie123"               // 密码
+
+            //v1和v2的签名使用
+            //1）只勾选v1签名并不会影响什么，但是在7.0上不会使用更安全的验证方式
+            //2）只勾选V2签名7.0以下会直接安装完显示未安装，7.0以上则使用了V2的方式验证
+            //3）同时勾选V1和V2则所有机型都没问题
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    // 配置构建类型，可打出不同类型的包
+    buildTypes {
+
+        release {
+            minifyEnabled false                  // 开启代码混淆
+            shrinkResources false                // 移除无用的resource文件
+            // proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            signingConfig signingConfigs.baseSignConfigs
+        }
+
+        debug {
+            signingConfig signingConfigs.baseSignConfigs
+        }
+    }
+
+    //    // JDK版本
+    //    compileOptions {
+    //        targetCompatibility JavaVersion.VERSION_1_7
+    //        sourceCompatibility JavaVersion.VERSION_1_7
+    //    }
+
+    // 目录指向配置
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    // 编译的时候因为javaMaxHeapSize不足导致无法编译成功——增加java堆内存大小
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
+    // android api23 抛弃了httpClient
+    useLibrary 'org.apache.http.legacy'
+
+    // libs 引用aar文件时 需要一下代码
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    // lint时候终止错误上报,防止编译的时候莫名的失败
+    lintOptions {
+        abortOnError false
+        disable 'InconsistentArrays', 'DefaultLocale', 'OldTargetApi', 'GradleOverrides', 'MissingTranslation', 'UnusedResources', 'GoogleAppIndexingWarning'
+    }
+
+    //    // 清理build文件夹
+    //    task clean(type: Delete) {
+    //        delete rootProject.buildDir
+    //    }
+
+    // 修改生成的apk名字
+    applicationVariants.all {
+        variant ->
+            variant.outputs.each {
+                output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.contains("release") && outputFile.name.endsWith('.apk')) {
+                        // def fileName = getProductName() + "_V${defaultConfig.versionName}_${releaseTime()}" + ".apk"
+                        def fileName = getProductName() + "_V" + defaultConfig.versionName + "_" + releaseTime() + ".apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+
+                    if (variant.getBuildType().isMinifyEnabled()) {
+                        variant.assemble.doLast {
+                            copy {
+                                from variant.mappingFile
+                                into "${projectDir}"
+                                rename { String fileName ->
+                                    getProductName() + "_V" + defaultConfig.versionName + "_" + releaseTime() + "_mapping" + ".txt"
+                                }
+                            }
+                        }
+                    }
+            }
+    }
+}
+
+dependencies {
+    //    compile files('libs/AMap_3DMap_V3.3.0_20160331.jar')
+    compile fileTree(include: '*.jar', dir: 'libs')
+    //    compile project(':galleryfinal')
+    compile(name: 'customprogressview', ext: 'aar')
+    compile 'com.android.support:support-v4:25.1.1'
+    compile 'com.tencent.wcdb:wcdb-android:1.0.0'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    // compile 'com.android.support:design:26.0.0-alpha1'
+    //    // 解决Error:warning: Ignoring InnerClasses attribute for an anonymous inner class
+    //    compile 'com.android.support:multidex:1.0.1'
+    //
+    //    //debugCompile是设置仅在我们开发Debug的时候，LeakCanary才会帮我们去检测内存泄漏
+    //    compile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    compile 'com.amap.api:search:latest.integration'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.8@aar'
+    compile 'cn.bingoogolapple:bga-zbar:1.1.8@aar'
+    compile 'q.rorbin:badgeview:1.1.2'
+}
+// 依赖的工具包
+

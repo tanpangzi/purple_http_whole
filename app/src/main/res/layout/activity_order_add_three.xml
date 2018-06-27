@@ -1,0 +1,238 @@
+<LinearLayout
+    style="@style/view_group_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        style="@style/line_horizontal_gray_style"
+        android:layout_height="10dp"
+        android:background="@color/bg_default"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingBottom="@dimen/distance_10"
+        android:paddingTop="@dimen/distance_10"
+        android:src="@drawable/single_new_image"/>
+
+    <!--<view style="@style/line_horizontal_gray_style"/>-->
+    <TextView
+        style="@style/line_horizontal_gray_style"
+        android:layout_height="10dp"
+        android:background="@color/bg_default"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/distance_15"
+                    android:text="身份证"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <com.zimi.zimixing.widget.AutoSizeGridView
+                    android:id="@+id/grid_view_sfz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="0px"
+                    android:horizontalSpacing="@dimen/distance_10"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/distance_10"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/distance_15"
+                    android:text="登记证"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <com.zimi.zimixing.widget.AutoSizeGridView
+                    android:id="@+id/grid_view_djz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="0px"
+                    android:horizontalSpacing="@dimen/distance_10"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/distance_10"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/distance_15"
+                    android:text="驾驶证"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <com.zimi.zimixing.widget.AutoSizeGridView
+                    android:id="@+id/grid_view_jsz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="0px"
+                    android:horizontalSpacing="@dimen/distance_10"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/distance_10"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/distance_15"
+                    android:text="行驶证"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <com.zimi.zimixing.widget.AutoSizeGridView
+                    android:id="@+id/grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="0px"
+                    android:horizontalSpacing="@dimen/distance_10"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/distance_10"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/distance_15"
+                    android:text="车辆图片"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <com.zimi.zimixing.widget.AutoSizeGridView
+                    android:id="@+id/grid_view_carinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="0px"
+                    android:horizontalSpacing="@dimen/distance_10"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/distance_10"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/distance_15"
+                    android:text="其他资料"
+                    android:textColor="@color/main_head_area_background"
+                    android:textSize="@dimen/font_size_normal"/>
+
+                <com.zimi.zimixing.widget.AutoSizeGridView
+                    android:id="@+id/grid_view_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="0px"
+                    android:horizontalSpacing="@dimen/distance_10"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/distance_10"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/distance_10"
+                android:text="请慎重填写表单信息！"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/font_size_normal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.zimi.zimixing.widget.AutoBgButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@color/main_head_area_background"
+                    android:text="上一步"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <com.zimi.zimixing.widget.AutoBgButton
+                    android:id="@+id/btn_goon"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@color/main_head_area_background"
+                    android:text="提交门店初审"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

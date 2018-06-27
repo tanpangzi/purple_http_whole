@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_info_bubble"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="2dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/map_info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="3"
+                android:singleLine="true"
+                android:text="王五"
+                android:textColor="@color/text_color"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/map_info_vehicle_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/map_info_name"
+                android:text="粤B123456"
+                android:textColor="@color/text_color"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/map_info_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/map_info_vehicle_num"
+                android:text=""
+                android:textColor="@color/text_color"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/map_info_icon"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/map_info_city"
+                android:src="@drawable/vehicle_icon_wired" />
+
+            <TextView
+                android:id="@+id/map_info_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9dp"
+                android:text="【行驶】"
+                android:textColor="#3fbc19"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/map_info_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/map_info_name"
+                android:layout_marginTop="2dp"
+                android:text="08-07 21:30:30 [定位] "
+                android:textSize="10sp" />
+
+
+            <TextView
+                android:id="@+id/map_info_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/map_info_location"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="08-07 21:30:30 [接收] "
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000" />
+
+        <RelativeLayout
+            android:id="@+id/rl_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="2dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/map_info_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="速度：56KM/H"
+                android:textColor="@color/text_color"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/map_info_travel_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="行驶3小时"
+                android:textColor="@color/text_color"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/map_info_location_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/map_info_speed"
+                android:layout_marginTop="2dp"
+                android:text="定位：GPS"
+                android:textColor="#3193e9"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/map_info_acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/map_info_travel_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="ACC：开"
+                android:textColor="#3193e9"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/map_info_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:text="地址："
+            android:textColor="@color/text_color"
+            android:textSize="10sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

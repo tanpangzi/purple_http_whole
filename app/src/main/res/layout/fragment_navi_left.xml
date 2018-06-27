@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:minWidth="200dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zmx_purple"
+        android:gravity="center"
+        android:minHeight="100dp"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="@dimen/distance_20">
+
+        <ImageView
+            android:id="@+id/nav_avator"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:src="@drawable/def_user" />
+
+        <TextView
+            android:id="@+id/nav_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/distance_15"
+            android:gravity="center_vertical"
+            android:text="谭谭"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/font_white"
+            android:textSize="@dimen/font_size_normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_photo"
+        android:orientation="vertical">
+
+        <com.zimi.zimixing.widget.AutoBgTextView
+            android:id="@+id/tv_wireless_trace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/distance_15"
+            android:drawableRight="@drawable/right_arrow"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/account_manager_ll_item"
+            android:paddingLeft="@dimen/account_manager_ll_item_tv_marginLeft"
+            android:paddingRight="@dimen/account_manager_ll_item_tv_marginStart"
+            android:text="@string/wireless_trace"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_size_normal" />
+
+        <com.zimi.zimixing.widget.AutoBgTextView
+            android:id="@+id/tv_lock_oil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/distance_20"
+            android:drawableRight="@drawable/right_arrow"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/account_manager_ll_item"
+            android:paddingLeft="@dimen/account_manager_ll_item_tv_marginLeft"
+            android:paddingRight="@dimen/account_manager_ll_item_tv_marginStart"
+            android:text="@string/lock_oil_elect"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_size_normal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/account_manager_ll_item">
+
+            <com.zimi.zimixing.widget.AutoBgTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/distance_20"
+                android:text="@string/call_police_info"
+                android:textColor="@color/font_content" />
+
+            <ToggleButton
+                android:id="@+id/btn_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance_20"
+                android:background="@drawable/selector_toggle"
+                android:paddingRight="20dp"
+                android:textOff="@null"
+                android:textOn="@null" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.zimi.zimixing.widget.AutoBgTextView
+                android:id="@+id/tv_clear_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/distance_15"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/account_manager_ll_item"
+                android:paddingLeft="@dimen/account_manager_ll_item_tv_marginLeft"
+                android:paddingRight="@dimen/account_manager_ll_item_tv_marginStart"
+                android:text="@string/clear_cache"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_size_normal" />
+
+            <TextView
+                android:id="@+id/tv_cache_count"
+                android:paddingRight="@dimen/account_manager_ll_item_tv_marginStart"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/font_size_normal"
+                android:textColor="@color/font_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <com.zimi.zimixing.widget.AutoBgTextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:drawablePadding="@dimen/distance_15"
+            android:drawableRight="@drawable/right_arrow"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/account_manager_ll_item"
+            android:paddingLeft="@dimen/account_manager_ll_item_tv_marginLeft"
+            android:paddingRight="@dimen/account_manager_ll_item_tv_marginStart"
+            android:text="@string/feed_back"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_size_normal" />
+
+
+    </LinearLayout>
+
+    <com.zimi.zimixing.widget.AutoBgTextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/distance_15"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/logout"
+        android:drawablePadding="@dimen/distance_10"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/account_manager_ll_item"
+        android:paddingLeft="@dimen/account_manager_ll_item_tv_marginLeft"
+        android:paddingRight="@dimen/account_manager_ll_item_tv_marginStart"
+        android:text="@string/logout"
+        android:textColor="@color/font_content"
+        android:textSize="@dimen/font_size_normal" />
+
+</RelativeLayout>

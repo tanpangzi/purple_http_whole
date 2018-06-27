@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_container"
+    android:minHeight="50dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="張三"
+        android:textColor="@color/text_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_car_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="粵B123456"
+        android:maxLength="10"
+        android:textColor="@color/text_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_model"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="奧迪A6"
+        android:textColor="@color/text_color"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btn_check"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_weight="1"
+        android:textSize="10sp"
+        android:paddingBottom="0dp"
+        android:layout_marginLeft="5dp"
+        android:paddingTop="0dp"
+        android:background="@drawable/shape_button_narrow"
+        android:text="@string/not_sign" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+</LinearLayout>

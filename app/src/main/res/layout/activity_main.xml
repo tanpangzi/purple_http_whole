@@ -1,0 +1,45 @@
+<RelativeLayout style="@style/view_group_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <!-- 各模块视图 -->
+
+    <FrameLayout
+        android:id="@+id/view_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@id/view_line"
+        android:layout_below="@id/title_view"/>
+
+    <View
+        android:id="@id/view_line"
+        style="@style/line_horizontal_gray_style"
+        android:layout_above="@+id/radiogroup"/>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/main_radio_btn_index"
+            style="@style/radio_btn_main_style"
+            android:checked="true"
+            android:drawableTop="@drawable/radio_main_home_selector"
+            android:text="@string/activity_main_index"/>
+
+        <RadioButton
+            android:id="@+id/main_radio_btn_mine"
+            style="@style/radio_btn_main_style"
+            android:drawableTop="@drawable/radio_main_mine_selector"
+            android:text="@string/activity_main_mine"/>
+    </RadioGroup>
+</RelativeLayout>

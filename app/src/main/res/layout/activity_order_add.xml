@@ -1,0 +1,449 @@
+<LinearLayout
+    style="@style/view_group_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--<View-->
+    <!--android:id="@id/view_line"-->
+    <!--style="@style/line_horizontal_gray_style"-->
+    <!--android:layout_height="10dp"-->
+    <!--android:layout_below="@+id/title_view"-->
+    <!--android:background="@color/bg_default"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_default"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/distance_10"
+                android:paddingLeft="@dimen/distance_20"
+                android:paddingRight="@dimen/distance_20"
+                android:paddingTop="@dimen/distance_10"
+                android:text="个人信息"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_size_normal"/>
+
+            <LinearLayout
+                android:id="@+id/view_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/distance_5"
+                android:paddingRight="@dimen/distance_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:gravity="center_vertical"
+                        android:minWidth="100dp"
+                        android:padding="@dimen/distance_15"
+                        android:text="姓名"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请扫描身份证或者输入姓名"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:maxLength="16"
+                        android:minHeight="@dimen/btn_height"
+                        android:paddingBottom="@dimen/distance_15"
+                        android:paddingLeft="@dimen/distance_15"
+                        android:paddingTop="@dimen/distance_15"
+                        android:singleLine="true"
+                        android:textColor="@color/font_content"
+                        android:textColorHint="@color/font_gray"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                    <com.zimi.zimixing.widget.AutoBgImageView
+                        android:id="@+id/img_scanning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/distance_5"
+                        android:padding="@dimen/distance_10"
+                        android:src="@drawable/scanning"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_gray_style"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:gravity="center_vertical"
+                        android:minWidth="100dp"
+                        android:padding="@dimen/distance_15"
+                        android:text="身份证号"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                    <EditText
+                        android:id="@+id/et_id_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入身份证号码"
+                        android:imeOptions="actionNext"
+                        android:maxLength="18"
+                        android:digits="@string/text_id_card_digits"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/btn_height"
+                        android:padding="@dimen/distance_15"
+                        android:singleLine="true"
+                        android:textColor="@color/font_content"
+                        android:textColorHint="@color/font_gray"
+                        android:textSize="@dimen/font_size_normal"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_gray_style"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:gravity="center_vertical"
+                        android:minWidth="100dp"
+                        android:padding="@dimen/distance_15"
+                        android:text="联系电话"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入联系电话"
+                        android:imeOptions="actionNext"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/btn_height"
+                        android:padding="@dimen/distance_15"
+                        android:singleLine="true"
+                        android:textColor="@color/font_content"
+                        android:textColorHint="@color/font_gray"
+                        android:textSize="@dimen/font_size_normal"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_gray_style"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:gravity="center_vertical"
+                        android:minWidth="100dp"
+                        android:padding="@dimen/distance_15"
+                        android:text="现住址"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                    <com.zimi.zimixing.widget.AutoBgTextView
+                        android:id="@+id/txt_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/distance_5"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical|right"
+                        android:hint="请选择"
+                        android:padding="@dimen/distance_15"
+                        android:textColor="@color/font_content"
+                        android:textColorHint="@color/font_gray"
+                        android:textSize="@dimen/font_size_normal"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_gray_style"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:gravity="center_vertical"
+                        android:minWidth="100dp"
+                        android:padding="@dimen/distance_15"
+                        android:text="详细地址"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                    <EditText
+                        android:id="@+id/et_address_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入详细地址"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/btn_height"
+                        android:maxLength="40"
+                        android:padding="@dimen/distance_15"
+                        android:singleLine="true"
+                        android:textColor="@color/font_content"
+                        android:textColorHint="@color/font_gray"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_default"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/distance_10"
+                android:paddingLeft="@dimen/distance_20"
+                android:paddingRight="@dimen/distance_20"
+                android:paddingTop="@dimen/distance_10"
+                android:text="车辆信息"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_size_normal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/distance_5"
+                android:paddingRight="@dimen/distance_5">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:gravity="center_vertical"
+                        android:minWidth="100dp"
+                        android:padding="@dimen/distance_15"
+                        android:text="车辆品牌"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                    <com.zimi.zimixing.widget.AutoBgTextView
+                        android:id="@+id/txt_brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/distance_5"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical|right"
+                        android:hint="请选择"
+                        android:padding="@dimen/distance_15"
+                        android:textColor="@color/font_content"
+                        android:textColorHint="@color/font_gray"
+                        android:textSize="@dimen/font_size_normal"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_gray_style"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:gravity="center_vertical"
+                        android:minWidth="100dp"
+                        android:padding="@dimen/distance_15"
+                        android:text="上牌时间"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                    <com.zimi.zimixing.widget.AutoBgTextView
+                        android:id="@+id/txt_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/distance_5"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical|right"
+                        android:hint="请选择"
+                        android:padding="@dimen/distance_15"
+                        android:textColor="@color/font_content"
+                        android:textColorHint="@color/font_gray"
+                        android:textSize="@dimen/font_size_normal"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_gray_style"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:gravity="center_vertical"
+                        android:minWidth="100dp"
+                        android:padding="@dimen/distance_15"
+                        android:text="上牌城市"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                    <com.zimi.zimixing.widget.AutoBgTextView
+                        android:id="@+id/txt_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/distance_5"
+                        android:drawableRight="@drawable/right_arrow"
+                        android:gravity="center_vertical|right"
+                        android:hint="请选择"
+                        android:padding="@dimen/distance_15"
+                        android:textColor="@color/font_content"
+                        android:textColorHint="@color/font_gray"
+                        android:textSize="@dimen/font_size_normal"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal_gray_style"
+                    android:layout_marginLeft="@dimen/distance_15"
+                    android:layout_marginRight="@dimen/distance_15"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/icon_red_start"
+                        android:gravity="center_vertical"
+                        android:minWidth="100dp"
+                        android:padding="@dimen/distance_15"
+                        android:text="行驶公里数（万）"
+                        android:textColor="@color/font_black"
+                        android:textSize="@dimen/font_size_normal"/>
+
+                    <EditText
+                        android:id="@+id/et_kilometers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入行驶公里数"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="7"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/btn_height"
+                        android:padding="@dimen/distance_15"
+                        android:singleLine="true"
+                        android:textColor="@color/font_content"
+                        android:textColorHint="@color/font_gray"
+                        android:textSize="@dimen/font_size_normal"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<View-->
+            <!--style="@style/line_horizontal_gray_style"-->
+            <!--android:layout_marginLeft="@dimen/distance_15"-->
+            <!--android:layout_marginRight="@dimen/distance_15"/>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/distance_20">
+
+                <com.zimi.zimixing.widget.AutoBgButton
+                    android:id="@+id/btn_submit"
+                    xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height"
+                    android:background="@color/main_head_area_background"
+                    android:text="提交评估"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_middle"
+                    custom:bgAlpha="150"
+                    custom:bgRadius="3dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

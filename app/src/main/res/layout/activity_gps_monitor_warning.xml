@@ -1,0 +1,206 @@
+<LinearLayout
+    style="@style/view_group_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_default"
+    android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/view_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/bg_default"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/title_bar_height"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.zimi.zimixing.widget.DYTEditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/distance_10"
+                android:background="@drawable/shape_round_line_gray"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="@dimen/distance_5"
+                android:ellipsize="end"
+                android:hint="请输入用户名或者车牌号码搜索"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="@dimen/distance_10"
+                android:paddingRight="@dimen/distance_10"
+                android:singleLine="true"
+                android:textColor="@color/font_content"
+                android:textColorHint="@color/font_gray"
+                android:textSize="@dimen/font_size_little"/>
+        </LinearLayout>
+
+
+        <com.zimi.zimixing.widget.AutoBgButton
+            android:id="@+id/txt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/distance_10"
+            android:background="@color/main_head_area_background"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="搜索"
+            android:textColor="@color/font_white"
+            android:textSize="@dimen/font_size_little"/>
+
+    </LinearLayout>
+
+    <com.zimi.zimixing.widget.pullview.PullToRefreshListView
+        android:id="@+id/lv_base"
+        style="@style/list_style"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_weight="1"
+        android:headerDividersEnabled="false"
+        android:paddingTop="@dimen/distance_10"
+        custom:mode="pullUpFromBottom"/>
+
+    <LinearLayout
+        android:id="@+id/view_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/all_alarm"
+                android:drawablePadding="@dimen/distance_10"
+                android:drawableRight="@drawable/arrow_right_black"
+                android:gravity="center_vertical|right"
+                android:padding="@dimen/distance_10"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_size_little"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="65dp"
+                android:text="所有报警"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_size_normal"/>
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal_gray_style"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txt_displacement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/alarm_displacement"
+                android:drawablePadding="@dimen/distance_10"
+                android:drawableRight="@drawable/arrow_right_black"
+                android:gravity="center_vertical|right"
+                android:padding="@dimen/distance_10"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_size_little"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="65dp"
+                android:text="位移报警"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_size_normal"/>
+
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal_gray_style"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txt_outages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/alarm_power_off"
+                android:drawablePadding="@dimen/distance_10"
+                android:drawableRight="@drawable/arrow_right_black"
+                android:gravity="center_vertical|right"
+                android:padding="@dimen/distance_10"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_size_little"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="65dp"
+                android:text=" 断电报警"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_size_normal"/>
+
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal_gray_style"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_crossing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/alarm_cross_border"
+                android:drawablePadding="@dimen/distance_10"
+                android:drawableRight="@drawable/arrow_right_black"
+                android:gravity="center_vertical|right"
+                android:padding="@dimen/distance_10"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_size_little"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="65dp"
+                android:text="越界报警"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_size_normal"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

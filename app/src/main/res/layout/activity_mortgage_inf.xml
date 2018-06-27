@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--车辆抵押 抵押信息-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/view_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/car_info_tv_style"
+            android:text="@string/guest_name" />
+
+        <TextView
+            android:id="@+id/tv_guest_name"
+            style="@style/car_info_tv_style"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/view_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/car_info_tv_style"
+            android:text="@string/vehicleinfo_license_plate" />
+
+        <TextView
+            android:id="@+id/tv_car_num"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            style="@style/car_info_tv_style" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/view_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/mortgage_infor_brand_tv"
+            style="@style/car_info_tv_style"
+            android:text="@string/vehicleinfo_brand" />
+
+        <TextView
+            android:id="@+id/tv_car_brand"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/mortgage_infor_brand_tv"
+            style="@style/car_info_tv_style" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/view_line"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/view_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/car_info_tv_style"
+            android:text="@string/signee" />
+
+        <TextView
+            android:id="@+id/tv_executor"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            style="@style/car_info_tv_style" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/view_line" />
+
+    <LinearLayout
+        android:id="@+id/mortgage_infor_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/btn_mortgage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_button"
+            android:text="@string/do_mortgage"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

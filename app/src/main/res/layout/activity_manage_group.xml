@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_default"
+    android:orientation="vertical">
+
+    <com.zimi.zimixing.widget.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+    <View
+        style="@style/line_horizontal_gray_style"
+        android:layout_height="@dimen/distance_10"
+        android:background="@color/bg_default"/>
+
+    <ExpandableListView
+        android:id="@+id/expandable_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:childDivider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@null"
+        android:listSelector="@color/transparent"/>
+
+    <!--</ScrollView>-->
+    <View
+        style="@style/line_horizontal_gray_style"
+        android:layout_height="@dimen/distance_5"
+        android:background="@color/bg_default"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/distance_5"
+            android:drawableRight="@drawable/icon_red_start"
+            android:padding="@dimen/distance_15"
+            android:text="授权时间"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_sel_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/distance_10"
+            android:drawableRight="@drawable/right_arrow"
+            android:gravity="center_vertical|right"
+            android:padding="@dimen/distance_15"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+</LinearLayout>
